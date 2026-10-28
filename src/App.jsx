@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Services from "./components/Services";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Hero />
 
         <Services />
+
+        <Contact />
 
         <section className="section">
           <h1>Sua carga no caminho certo.</h1>

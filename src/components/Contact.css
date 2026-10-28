@@ -1,0 +1,254 @@
+.contact {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.contact__container {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 48px;
+}
+
+.contact__eyebrow {
+    color: #ae710a;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact__content h2 {
+    max-width: 550px;
+    margin: 20px 0;
+
+    color: #10243b;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+}
+
+.contact__content>p {
+    max-width: 500px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.contact__info {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 36px;
+}
+
+.contact__info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #fff3da;
+    color: #9a6100;
+    font-size: 24px;
+    border-radius: 12px;
+}
+
+.contact__info strong {
+    color: #10243b;
+    font-size: 16px;
+}
+
+.contact__info p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Formulário */
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    min-width: 0;
+    padding: 24px;
+
+    background-color: #f5f7fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+}
+
+.contact__form h3 {
+    margin: 0 0 8px;
+    color: #10243b;
+    font-size: 23px;
+}
+
+.contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact__field label {
+    color: #10243b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact__field input,
+.contact__field select,
+.contact__field textarea {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    color: #10243b;
+
+    font: inherit;
+    font-size: 15px;
+}
+
+.contact__field textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact__field input:focus,
+.contact__field select:focus,
+.contact__field textarea:focus {
+    outline: 2px solid #f59e0b;
+    outline-offset: 2px;
+    border-color: #ae710a;
+}
+
+.contact__disclaimer {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.contact__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 24px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #f59e0b;
+    color: #10243b;
+
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.contact__submit:hover:not(:disabled) {
+    background-color: #e48d00;
+}
+
+.contact__submit:focus-visible {
+    outline: 3px solid #10243b;
+    outline-offset: 3px;
+}
+
+.contact__submit:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.contact__notice {
+    margin: 0;
+    color: #9a6100;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Botão flutuante */
+
+.contact__floating-whatsapp {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    z-index: 200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 14px 18px;
+
+    background-color: #16783e;
+    color: #ffffff;
+
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: transform 0.2s;
+}
+
+.contact__floating-whatsapp:hover {
+    transform: translateY(-3px);
+}
+
+.contact__floating-whatsapp:focus-visible {
+    outline: 3px solid #10243b;
+    outline-offset: 3px;
+}
+
+.contact__floating-whatsapp span:first-child {
+    font-size: 22px;
+}
+
+/* Tablet e desktop */
+
+@media (min-width: 900px) {
+    .contact {
+        padding: 110px 0;
+    }
+
+    .contact__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+
+    .contact__form {
+        padding: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact__submit,
+    .contact__floating-whatsapp {
+        transition: none;
+    }
+
+    .contact__floating-whatsapp:hover {
+        transform: none;
+    }
+}

@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import Hero from "./components/Hero"
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
 
       <main id="inicio">
         <Hero />
-        
+
+        <Services />
+
         <section className="section">
           <h1>Sua carga no caminho certo.</h1>
           <p>

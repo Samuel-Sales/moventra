@@ -1,4 +1,5 @@
 import Header from "./components/Header"
+import Hero from "./components/Hero"
 
 function App() {
   return (
@@ -6,6 +7,8 @@ function App() {
       <Header />
 
       <main id="inicio">
+        <Hero />
+        
         <section className="section">
           <h1>Sua carga no caminho certo.</h1>
           <p>

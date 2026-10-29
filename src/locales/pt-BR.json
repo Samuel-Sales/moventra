@@ -1,0 +1,84 @@
+{
+    "meta": {
+        "title": "Moventra | Transporte e Logística",
+        "description": "Conheça as soluções em transporte e logística da Moventra. Projeto demonstrativo."
+    },
+    "header": {
+        "home": "Início",
+        "services": "Serviços",
+        "contact": "Contato",
+        "brandLabel": "Moventra - voltar ao início",
+        "openMenu": "Abrir menu",
+        "closeMenu": "Fechar menu",
+        "navigationLabel": "Navegação principal",
+        "switchLanguage": "Mudar idioma para inglês",
+        "brandSubtitle": "TRANSPORTE & LOGÍSTICA"
+    },
+    "hero": {
+        "eyebrow": "Transporte & Logística",
+        "titleStart": "Sua carga no caminho",
+        "titleEnd": "certo.",
+        "description": "Soluções em transporte e logística para conectar seu negócio a novos destinos, com eficiência e confiança.",
+        "quote": "Solicitar cotação",
+        "services": "Nossas soluções",
+        "visualTop": "MOVENTRA / EM MOVIMENTO",
+        "connection": "CONEXÃO",
+        "values": "EFICIÊNCIA • CONFIANÇA"
+    },
+    "services": {
+        "eyebrow": "O que fazemos",
+        "title": "Soluções que movem o seu negócio.",
+        "subtitle": "Conheça nossas soluções em transporte e logística.",
+        "learnMore": "Saiba mais",
+        "items": {
+            "road": {
+                "title": "Transporte rodoviário",
+                "description": "Soluções para movimentação de mercadorias com planejamento e eficiência."
+            },
+            "delivery": {
+                "title": "Distribuição e entregas",
+                "description": "Organização das operações de distribuição para apoiar o seu negócio."
+            },
+            "support": {
+                "title": "Apoio logístico",
+                "description": "Planejamento de soluções logísticas adaptadas às necessidades de cada operação."
+            }
+        }
+    },
+    "contact": {
+        "eyebrow": "Fale conosco",
+        "title": "Vamos movimentar seu negócio?",
+        "intro": "Conte um pouco sobre sua necessidade. Estamos aqui para iniciar uma conversa sobre soluções em transporte e logística.",
+        "supportTitle": "Atendimento pelo WhatsApp",
+        "supportDescription": "Preencha o formulário e envie sua solicitação diretamente pelo aplicativo.",
+        "formTitle": "Solicite um contato",
+        "nameLabel": "Nome completo",
+        "namePlaceholder": "Seu nome",
+        "emailLabel": "E-mail",
+        "emailPlaceholder": "seu@email.com",
+        "serviceLabel": "Serviço de interesse",
+        "servicePlaceholder": "Selecione um serviço",
+        "other": "Outros",
+        "messageLabel": "Sua mensagem",
+        "messagePlaceholder": "Como podemos ajudar?",
+        "disclaimer": "Ao continuar, o WhatsApp será aberto com os dados preenchidos para você revisar e enviar a mensagem.",
+        "submit": "Enviar via WhatsApp",
+        "notice": "Integração em demonstração: configure o número do WhatsApp para habilitar o envio.",
+        "whatsappLabel": "Conversar pelo WhatsApp",
+        "whatsappGreeting": "Olá! Gostaria de solicitar informações sobre os serviços da Moventra.",
+        "whatsappName": "Nome",
+        "whatsappEmail": "E-mail",
+        "whatsappService": "Serviço",
+        "whatsappMessage": "Mensagem"
+    },
+    "footer": {
+        "brandDescription": "Conectando negócios a novos destinos por meio de soluções em transporte e logística.",
+        "navigationTitle": "Navegação",
+        "navigationLabel": "Navegação do rodapé",
+        "contactTitle": "Vamos conversar?",
+        "contactDescription": "Entre em contato para saber mais sobre nossas soluções.",
+        "contactButton": "Solicitar contato",
+        "copyright": "© {{year}} Moventra. Projeto demonstrativo para portfólio.",
+        "backToTop": "Voltar ao início ↑"
+    }
+}

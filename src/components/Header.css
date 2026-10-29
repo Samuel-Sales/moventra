@@ -2,7 +2,6 @@
   position: sticky;
   top: 0;
   z-index: 100;
-
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
 }
@@ -59,6 +58,39 @@
   letter-spacing: 0.5px;
 }
 
+/* Botões e seleção de idioma */
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.header__language {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 9px 10px;
+  background-color: #f5f7fa;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  color: #10243b;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.header__language:hover {
+  background-color: #e8eef5;
+}
+
+/* Menu mobile */
+
 .header__menu-button {
   display: flex;
   flex-direction: column;
@@ -67,6 +99,7 @@
   padding: 10px;
   border: none;
   background: transparent;
+
   cursor: pointer;
 }
 
@@ -107,21 +140,20 @@
   color: #b86e00;
 }
 
-.header__menu-button:focus-visible,
-.header__nav a:focus-visible,
-.header__logo:focus-visible {
+/* Acessibilidade */
+
+.header a:focus-visible,
+.header button:focus-visible {
   outline: 3px solid #f59e0b;
-  outline-offset: 4px;
+  outline-offset: 3px;
 }
 
-/* Versão para tablets maiores e desktops */
+/* Desktop */
 
 @media (min-width: 768px) {
-  .header__menu-button {
-    display: none;
-  }
 
-  .header__nav {
+  .header__nav,
+  .header__nav--open {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -132,5 +164,36 @@
 
     border: none;
     box-shadow: none;
+    margin-left: auto;
+  }
+
+  .header__actions {
+    margin-left: 24px;
+  }
+
+  .header__menu-button {
+    display: none;
+  }
+}
+
+/* Celulares menores */
+
+@media (max-width: 380px) {
+  .header__logo-text {
+    font-size: 16px;
+  }
+
+  .header__logo-text small {
+    font-size: 8px;
+  }
+
+  .header__logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header__language {
+    padding: 8px;
+    font-size: 11px;
   }
 }

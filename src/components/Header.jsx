@@ -1,51 +1,98 @@
+
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./Header.css";
 
-export default function Header() {
+function Header() {
     const [menuAberto, setMenuAberto] = useState(false);
+    const { t, i18n } = useTranslation();
+
+    const isEnglish = i18n.resolvedLanguage === "en";
 
     function fecharMenu() {
         setMenuAberto(false);
     }
 
+    function alternarIdioma() {
+        i18n.changeLanguage(isEnglish ? "pt-BR" : "en");
+    }
+
     return (
         <header className="header">
             <div className="header__container">
-                <a href="#inicio" className="header__logo" onClick={fecharMenu}>
-                    <span className="header__logo-icon">M</span>
+                <a
+                    href="#inicio"
+                    className="header__logo"
+                    aria-label={t("header.brandLabel")}
+                    onClick={fecharMenu}
+                >
+                    <span
+                        className="header__logo-icon"
+                        aria-hidden="true"
+                    >
+                        M
+                    </span>
+
                     <span className="header__logo-text">
                         MOVENTRA
-                        <small>TRANSPORTE & LOGÍSTICA</small>
+                        <small>{t("header.brandSubtitle")}</small>
                     </span>
                 </a>
 
-                <button
-                    className="header__menu-button"
-                    type="button"
-                    aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
-                    aria-expanded={menuAberto}
-                    aria-controls="menu-principal"
-                    onClick={() => setMenuAberto(!menuAberto)}
+                <nav
+                    id="menu-principal"
+                    className={`header__nav ${menuAberto ? "header__nav--open" : ""
+                        }`}
+                    aria-label={t("header.navigationLabel")}
                 >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                    <a href="#inicio" onClick={fecharMenu}>
+                        {t("header.home")}
+                    </a>
 
-                <nav id="menu-principal" className={`header__nav ${menuAberto ? "header__nav--open" : ""
-                    }`}
-                    aria-label="Navegação principal"
-                >
-                    <a href="#inicio" onClick={fecharMenu}>Início</a>
                     <a href="#servicos" onClick={fecharMenu}>
-                        Serviços
+                        {t("header.services")}
                     </a>
 
                     <a href="#contato" onClick={fecharMenu}>
-                        Contato
+                        {t("header.contact")}
                     </a>
                 </nav>
+
+                <div className="header__actions">
+                    <button
+                        className="header__language"
+                        type="button"
+                        onClick={alternarIdioma}
+                        aria-label={t("header.switchLanguage")}
+                        title={t("header.switchLanguage")}
+                    >
+                        <span aria-hidden="true">🌐</span>
+
+                        <span>{isEnglish ? "EN" : "PT-BR"}</span>
+
+                        <span aria-hidden="true">⇄</span>
+                    </button>
+
+                    <button
+                        className="header__menu-button"
+                        type="button"
+                        aria-label={t(
+                            menuAberto
+                                ? "header.closeMenu"
+                                : "header.openMenu"
+                        )}
+                        aria-expanded={menuAberto}
+                        aria-controls="menu-principal"
+                        onClick={() => setMenuAberto(!menuAberto)}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </header>
     );
-};
+}
+
+export default Header;

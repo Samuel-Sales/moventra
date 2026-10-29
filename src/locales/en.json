@@ -1,0 +1,84 @@
+{
+    "meta": {
+        "title": "Moventra | Transport & Logistics",
+        "description": "Discover Moventra's transport and logistics solutions. Demonstration project."
+    },
+    "header": {
+        "home": "Home",
+        "services": "Services",
+        "contact": "Contact",
+        "brandLabel": "Moventra - back to top",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "navigationLabel": "Main navigation",
+        "switchLanguage": "Switch language to Portuguese",
+        "brandSubtitle": "TRANSPORT & LOGISTICS"
+    },
+    "hero": {
+        "eyebrow": "Transport & Logistics",
+        "titleStart": "Your cargo on the right",
+        "titleEnd": "track.",
+        "description": "Transport and logistics solutions to connect your business to new destinations with efficiency and reliability.",
+        "quote": "Request a quote",
+        "services": "Our solutions",
+        "visualTop": "MOVENTRA / ON THE MOVE",
+        "connection": "CONNECTION",
+        "values": "EFFICIENCY • RELIABILITY"
+    },
+    "services": {
+        "eyebrow": "What we do",
+        "title": "Solutions that move your business forward.",
+        "subtitle": "Explore our transport and logistics solutions.",
+        "learnMore": "Learn more",
+        "items": {
+            "road": {
+                "title": "Road transport",
+                "description": "Planned, efficient solutions for moving goods."
+            },
+            "delivery": {
+                "title": "Distribution and delivery",
+                "description": "Coordinated distribution operations to support your business."
+            },
+            "support": {
+                "title": "Logistics support",
+                "description": "Logistics planning tailored to each operation's needs."
+            }
+        }
+    },
+    "contact": {
+        "eyebrow": "Get in touch",
+        "title": "Let's move your business forward.",
+        "intro": "Tell us a little about your needs. We're here to discuss transport and logistics solutions.",
+        "supportTitle": "WhatsApp support",
+        "supportDescription": "Complete the form and open your request directly in WhatsApp.",
+        "formTitle": "Request a callback",
+        "nameLabel": "Full name",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you@example.com",
+        "serviceLabel": "Service of interest",
+        "servicePlaceholder": "Select a service",
+        "other": "Other",
+        "messageLabel": "Your message",
+        "messagePlaceholder": "How can we help?",
+        "disclaimer": "When you continue, WhatsApp will open with your details so you can review and send the message.",
+        "submit": "Send via WhatsApp",
+        "notice": "Demo integration: configure a WhatsApp number to enable sending.",
+        "whatsappLabel": "Chat on WhatsApp",
+        "whatsappGreeting": "Hello! I'd like to learn more about Moventra's services.",
+        "whatsappName": "Name",
+        "whatsappEmail": "Email",
+        "whatsappService": "Service",
+        "whatsappMessage": "Message"
+    },
+    "footer": {
+        "brandDescription": "Connecting businesses to new destinations through transport and logistics solutions.",
+        "navigationTitle": "Navigation",
+        "navigationLabel": "Footer navigation",
+        "contactTitle": "Let's talk.",
+        "contactDescription": "Get in touch to learn more about our solutions.",
+        "contactButton": "Contact us",
+        "copyright": "© {{year}} Moventra. Demonstration project for portfolio purposes.",
+        "backToTop": "Back to top ↑"
+    }
+}

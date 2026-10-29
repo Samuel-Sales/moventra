@@ -1,7 +1,10 @@
 
+import { useTranslation } from "react-i18next";
 import "./Hero.css";
 
 function Hero() {
+    const { t } = useTranslation();
+
     return (
         <section
             className="hero"
@@ -10,19 +13,18 @@ function Hero() {
         >
             <div className="hero__container">
                 <div className="hero__content">
+
                     <span className="hero__eyebrow">
-                        Transporte & Logística
+                        {t("hero.eyebrow")}
                     </span>
 
                     <h1 id="hero-title">
-                        Sua carga no caminho{" "}
-                        <span>certo.</span>
+                        {t("hero.titleStart")}{" "}
+                        <span>{t("hero.titleEnd")}</span>
                     </h1>
 
                     <p className="hero__description">
-                        Soluções em transporte e logística para
-                        conectar seu negócio a novos destinos,
-                        com eficiência e confiança.
+                        {t("hero.description")}
                     </p>
 
                     <div className="hero__actions">
@@ -30,7 +32,7 @@ function Hero() {
                             href="#contato"
                             className="hero__button hero__button--primary"
                         >
-                            Solicitar cotação
+                            {t("hero.quote")}
                             <span aria-hidden="true">↗</span>
                         </a>
 
@@ -38,14 +40,14 @@ function Hero() {
                             href="#servicos"
                             className="hero__button hero__button--secondary"
                         >
-                            Nossas soluções
+                            {t("hero.services")}
                         </a>
                     </div>
                 </div>
 
                 <div className="hero__visual" aria-hidden="true">
                     <div className="hero__visual-top">
-                        <span>MOVENTRA / EM MOVIMENTO</span>
+                        <span>{t("hero.visualTop")}</span>
                         <span>↗</span>
                     </div>
 
@@ -116,8 +118,8 @@ function Hero() {
                     </svg>
 
                     <div className="hero__visual-bottom">
-                        <span>CONEXÃO</span>
-                        <span>EFICIÊNCIA • CONFIANÇA</span>
+                        <span>{t("hero.connection")}</span>
+                        <span>{t("hero.values")}</span>
                     </div>
                 </div>
             </div>

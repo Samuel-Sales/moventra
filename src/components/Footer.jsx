@@ -1,25 +1,28 @@
 
+import { useTranslation } from "react-i18next";
 import "./Footer.css";
 
 const navigationLinks = [
     {
-        id: 1,
-        label: "Início",
+        id: "home",
         href: "#inicio",
+        translationKey: "header.home",
     },
     {
-        id: 2,
-        label: "Serviços",
+        id: "services",
         href: "#servicos",
+        translationKey: "header.services",
     },
     {
-        id: 3,
-        label: "Contato",
+        id: "contact",
         href: "#contato",
+        translationKey: "header.contact",
     },
 ];
 
 function Footer() {
+    const { t } = useTranslation();
+
     const currentYear = new Date().getFullYear();
 
     return (
@@ -27,12 +30,11 @@ function Footer() {
             <div className="footer__container">
                 <div className="footer__content">
 
-                    {/* Identidade da empresa */}
                     <div className="footer__brand">
                         <a
                             href="#inicio"
                             className="footer__logo"
-                            aria-label="Moventra - voltar ao início"
+                            aria-label={t("header.brandLabel")}
                         >
                             <span
                                 className="footer__logo-icon"
@@ -43,64 +45,64 @@ function Footer() {
 
                             <span className="footer__logo-text">
                                 MOVENTRA
-                                <small>TRANSPORTE & LOGÍSTICA</small>
+                                <small>
+                                    {t("header.brandSubtitle")}
+                                </small>
                             </span>
                         </a>
 
                         <p>
-                            Conectando negócios a novos destinos
-                            por meio de soluções em transporte
-                            e logística.
+                            {t("footer.brandDescription")}
                         </p>
                     </div>
 
-                    {/* Navegação */}
                     <nav
                         className="footer__navigation"
-                        aria-label="Navegação do rodapé"
+                        aria-label={t("footer.navigationLabel")}
                     >
-                        <h2>Navegação</h2>
+                        <h2>
+                            {t("footer.navigationTitle")}
+                        </h2>
 
                         <ul>
                             {navigationLinks.map((link) => (
                                 <li key={link.id}>
                                     <a href={link.href}>
-                                        {link.label}
+                                        {t(link.translationKey)}
                                     </a>
                                 </li>
                             ))}
                         </ul>
                     </nav>
 
-                    {/* Chamada para contato */}
                     <div className="footer__contact">
-                        <h2>Vamos conversar?</h2>
+                        <h2>
+                            {t("footer.contactTitle")}
+                        </h2>
 
                         <p>
-                            Entre em contato para saber mais
-                            sobre nossas soluções.
+                            {t("footer.contactDescription")}
                         </p>
 
                         <a
                             href="#contato"
                             className="footer__button"
                         >
-                            Solicitar contato
+                            {t("footer.contactButton")}
                             <span aria-hidden="true">↗</span>
                         </a>
                     </div>
-
                 </div>
 
-                {/* Parte inferior */}
                 <div className="footer__bottom">
                     <p>
-                        © {currentYear} Moventra.
-                        Projeto demonstrativo.
+                        {t("footer.copyright", {
+                            year: currentYear,
+                        })}
                     </p>
 
                     <a href="#inicio">
-                        Voltar ao início ↑
+                        {t("footer.backToTop")}
                     </a>
                 </div>
             </div>
